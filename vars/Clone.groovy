@@ -6,7 +6,7 @@ def call(String repoUrl, String branch = 'master') {
 def checkoutRepo(String repoUrl, String branch) {
     node {
         def repoDir = "${env.WORKSPACE}/my_repo"
-        deleteDir()
+        checkDir()
         checkout([$class: 'GitSCM', branches: [[name: "*/${branch}"]], userRemoteConfigs: [[url: repoUrl, credentialsId: 'your_git_credentials']]])
         return repoDir
     }
