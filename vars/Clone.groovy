@@ -1,6 +1,7 @@
- def call() = 'https://github.com/opstree/spring3hibernate.git'
-
-    
-    checkout([$class: 'GitSCM', branches: [[name: '*/java7']], userRemoteConfigs: [[url: gitRepoUrl]]])
-
+def call() {
+    node {
+        
+        sh 'git clone 'https://github.com/opstree/spring3hibernate.git'
+    }
+}
 
