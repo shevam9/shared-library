@@ -1,3 +1,3 @@
 def call(){
-  mvn checkstyle:checkstyle
+  sh 'mvn checkstyle:checkstyle'
 }
